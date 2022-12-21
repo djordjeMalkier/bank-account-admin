@@ -23,7 +23,7 @@ public class Controller {
         this.service = service;
     }
 
-    @PostMapping("/authenticate")
+    @PostMapping("/auth")
     @ResponseStatus(HttpStatus.OK)
     public ResponseEntity<String> auth(@RequestBody AuthenticationRequest request){
         return ResponseEntity.ok(service.auth(request));
